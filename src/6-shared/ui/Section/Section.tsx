@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 
-import { Headings, ParentLink } from '../../api';
+import type { Headings, ParentLink } from '../../api';
 import { cn } from '../../lib';
 import { Skeleton } from '../Skeleton';
 

@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'class-variance-authority';
 
-import { Headings } from '../../api';
+import type { Headings } from '../../api';
 import { cn } from '../../lib';
 
 const sectionHeaderVariants = cva('*:w-full h-full first-letter:uppercase', {

@@ -1,0 +1,19 @@
+services:
+  web:
+    image: ghcr.io/shatynska-labs/dro-psypra:${IMAGE_TAG:?IMAGE_TAG is not rendered}
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    networks:
+      - platform_edge
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.dro-psypra.rule=Host(`dro.psypra.com`)'
+      - 'traefik.http.routers.dro-psypra.entrypoints=websecure'
+      - 'traefik.http.routers.dro-psypra.tls.certresolver=letsencrypt'
+      - 'traefik.http.services.dro-psypra.loadbalancer.server.port=8080'
+
+networks:
+  platform_edge:
+    external: true
