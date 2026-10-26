@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
-import { fileURLToPath } from 'node:url';
-
-import createJiti from 'jiti';
-
-const jiti = createJiti(fileURLToPath(import.meta.url));
-
-// Import env to validate during build
-jiti('./src/6-shared/config/env');
-
+// The published site is the simplified page only: fully static, no API.
 const nextConfig = {
-  output: 'standalone',
+  output: 'export',
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

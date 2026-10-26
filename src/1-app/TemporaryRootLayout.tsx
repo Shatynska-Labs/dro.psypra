@@ -12,7 +12,7 @@ type Props = Readonly<{
 
 export function TemporaryRootLayout({ children }: Props) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body
         className={cn(
           manrope.className,

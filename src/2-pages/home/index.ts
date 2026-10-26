@@ -1,1 +1,1 @@
-export { Home, TemporaryHome } from './ui';
+export { TemporaryHome } from './ui';
